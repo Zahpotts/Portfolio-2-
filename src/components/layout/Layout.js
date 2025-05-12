@@ -5,7 +5,7 @@ import DragonBallBattleScene from "../DragonBallBattleScene";
 
 export default function Layout({ children, title = 'Isaiah Potts - Portfolio' }) {
     return (
-        <>
+        <div className=" bg-transparent flex flex-col min-h-screen">
         <Head>
             <title>{title}</title>
             <meta name = 'description' content = 'My Portfolio' />
@@ -15,7 +15,7 @@ export default function Layout({ children, title = 'Isaiah Potts - Portfolio' })
         <Navbar />
         <main> {children}</main>
         <Footer />
-        </>
+        </div>
 
     );
 }

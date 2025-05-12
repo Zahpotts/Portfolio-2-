@@ -15,6 +15,7 @@ export default function Navbar() {
           <Link href="/about" className="hover:text-yellow-200 transition">About</Link>
           <Link href="/projects" className="hover:text-yellow-200 transition">Projects</Link>
           <Link href="/contact" className="hover:text-yellow-200 transition">Contact</Link>
+          <a href="/Isaiah_Potts_Resume.pdf" download className="hover:text-yellow-200 transition">Resume</a>
         </div>
       </nav>
     </header>
