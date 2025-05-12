@@ -34,7 +34,7 @@ export default function Home() {
 
       {/* Skills Section with Glowing Tags */}
       <section className="py-10 bg-gray-900">
-        <h2 className="text-3xl font-bold text-center text-yellow-300 mb-6 ki-aura">Skills & Technologies</h2>
+        <h2 className="text-3xl font-bold text-center mb-6 ki-aura">Skills & Technologies</h2>
         <div className="grid gap-4 px-4">
           {skills.map((skillGroup) => (
             <div key={skillGroup.category}>
