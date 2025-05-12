@@ -24,3 +24,113 @@ body {
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
+/* Ki Ball Effect */
+@keyframes kiBlast {
+  0% {
+    transform: scale(0.5);
+    opacity: 0.7;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+  }
+  50% {
+    transform: scale(1.2);
+    opacity: 1;
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.8);
+  }
+  100% {
+    transform: scale(0.5);
+    opacity: 0.7;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+  }
+}
+
+.ki-ball {
+  width: 100px;
+  height: 100px;
+  background: radial-gradient(circle, rgba(255, 165, 0, 1), rgba(255, 0, 0, 1));
+  border-radius: 50%;
+  animation: kiBlast 2s infinite;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+}
+/* Ki Aura Effect */
+@keyframes auraGlow {
+  0% {
+    box-shadow: 0 0 10px rgba(255, 255, 0, 0.7), 0 0 20px rgba(255, 255, 0, 0.5);
+  }
+  50% {
+    box-shadow: 0 0 25px rgba(255, 255, 0, 1), 0 0 50px rgba(255, 165, 0, 0.7);
+  }
+  100% {
+    box-shadow: 0 0 10px rgba(255, 255, 0, 0.7), 0 0 20px rgba(255, 255, 0, 0.5);
+  }
+}
+
+.ki-aura {
+  animation: auraGlow 2s infinite;
+  border-radius: 12px;
+  box-shadow: 0 0 10px rgba(255, 255, 0, 0.7), 0 0 20px rgba(255, 255, 0, 0.5);
+}
+
+/* Button Pulse (Ki Button) */
+@keyframes kiButtonPulse {
+  0% {
+    transform: scale(1);
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+  }
+  50% {
+    transform: scale(1.1);
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.8);
+  }
+  100% {
+    transform: scale(1);
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+  }
+}
+
+.ki-button:hover {
+  animation: kiButtonPulse 1s ease-in-out infinite;
+}
+
+/* Glowing Skill Tags (Ki Tag) */
+.ki-tag {
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.ki-tag:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 15px rgba(255, 255, 0, 0.8);
+}
+@keyframes glowText {
+  0% {
+    text-shadow: 0 0 5px rgba(255, 255, 0, 0.5);
+  }
+  50% {
+    text-shadow: 0 0 15px rgba(255, 255, 0, 1), 0 0 25px rgba(255, 165, 0, 0.7);
+  }
+  100% {
+    text-shadow: 0 0 5px rgba(255, 255, 0, 0.5);
+  }
+}
+
+.ki-glow-text {
+  animation: glowText 2s infinite;
+}
+
+/* Project Cards Hover Effect */
+@keyframes kiCardGlow {
+  0% {
+    transform: scale(1);
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+  }
+  50% {
+    transform: scale(1.05);
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.8);
+  }
+  100% {
+    transform: scale(1);
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+  }
+}
+
+.project-card:hover {
+  animation: kiCardGlow 1s ease-in-out infinite;
+}
