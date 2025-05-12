@@ -134,3 +134,222 @@ body {
 .project-card:hover {
   animation: kiCardGlow 1s ease-in-out infinite;
 }
+
+/* Dragon Ball Battle Background Animation */
+@keyframes battleBackground {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* Battle Scene Container */
+.battle-scene {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  overflow: hidden;
+  background: linear-gradient(135deg, #060d2c, #1a237e, #4a148c, #311b92);
+  background-size: 400% 400%;
+  animation: battleBackground 15s ease infinite;
+}
+
+/* Energy Particles */
+.energy-particle {
+  position: absolute;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.9) 0%, rgba(255, 220, 0, 0.8) 25%, rgba(255, 140, 0, 0.6) 50%, rgba(255, 0, 0, 0.4) 75%, transparent 100%);
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: -1;
+}
+
+/* Energy Beam */
+@keyframes energyBeam {
+  0% {
+    opacity: 0;
+    transform: scale(0.1) rotate(0deg);
+  }
+  20% {
+    opacity: 1;
+    transform: scale(1) rotate(45deg);
+  }
+  80% {
+    opacity: 1;
+    transform: scale(1.2) rotate(90deg);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(0.1) rotate(135deg);
+  }
+}
+
+.energy-beam {
+  position: absolute;
+  width: 20vw;
+  height: 10vh;
+  background: linear-gradient(90deg, rgba(255, 255, 255, 0.9), rgba(0, 255, 255, 0.8), rgba(0, 191, 255, 0.6));
+  filter: blur(8px);
+  border-radius: 50%;
+  animation: energyBeam 6s ease-in-out infinite;
+  animation-delay: calc(var(--beam-delay) * 1s);
+  transform-origin: center;
+  z-index: -1;
+}
+
+/* Ground Crater */
+@keyframes craterPulse {
+  0% {
+    box-shadow: 0 0 15px 5px rgba(255, 165, 0, 0.5);
+    opacity: 0.4;
+  }
+  50% {
+    box-shadow: 0 0 30px 15px rgba(255, 140, 0, 0.8);
+    opacity: 0.7;
+  }
+  100% {
+    box-shadow: 0 0 15px 5px rgba(255, 165, 0, 0.5);
+    opacity: 0.4;
+  }
+}
+
+.ground-crater {
+  position: absolute;
+  bottom: -50px;
+  background: radial-gradient(ellipse at center, rgba(80, 30, 0, 0.9) 0%, rgba(50, 15, 0, 0.7) 40%, transparent 70%);
+  border-radius: 50%;
+  animation: craterPulse 4s ease-in-out infinite;
+  z-index: -1;
+}
+
+/* Lightning Effect */
+@keyframes lightning {
+  0%, 100% {
+    opacity: 0;
+  }
+  92% {
+    opacity: 0;
+  }
+  94%, 96% {
+    opacity: 1;
+  }
+  98% {
+    opacity: 0;
+  }
+}
+
+.lightning {
+  position: absolute;
+  width: 3px;
+  background: rgba(255, 255, 255, 0.9);
+  transform-origin: top;
+  filter: blur(1px);
+  animation: lightning 6s infinite;
+  animation-delay: calc(var(--lightning-delay) * 1s);
+  z-index: -1;
+}
+
+/* Character Silhouette */
+@keyframes floatAnimation {
+  0% {
+    transform: translateY(0px) scale(1);
+  }
+  50% {
+    transform: translateY(-20px) scale(1.05);
+  }
+  100% {
+    transform: translateY(0px) scale(1);
+  }
+}
+
+.character {
+  position: absolute;
+  width: 100px;
+  height: 180px;
+  background: radial-gradient(
+    ellipse at center,
+    rgba(255, 255, 255, 0) 20%,
+    rgba(255, 255, 255, 0.1) 30%,
+    rgba(255, 255, 255, 0) 70%
+  );
+  border-radius: 50%;
+  animation: floatAnimation 4s ease-in-out infinite;
+  animation-delay: calc(var(--char-delay) * 1s);
+  z-index: -1;
+}
+
+.character::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 25px;
+  width: 50px;
+  height: 50px;
+  background: radial-gradient(circle, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0) 70%);
+  border-radius: 50% 50% 0 0;
+}
+
+.character::after {
+  content: '';
+  position: absolute;
+  top: 30px;
+  left: 20px;
+  width: 60px;
+  height: 100px;
+  background: radial-gradient(ellipse, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0) 70%);
+  border-radius: 30px;  
+}
+
+.character-aura {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(10px);
+  opacity: 0.7;
+  animation: auraGlow 2s infinite;
+  z-index: -2;
+}
+
+/* Content overlay to ensure text readability */
+.content-overlay {
+  position: relative;
+  z-index: 1;
+  background-color: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(5px);
+  border-radius: 16px;
+  margin: 20px;
+  padding: 20px;
+}
+
+/* Kamehameha special effect */
+@keyframes kamehameha {
+  0% {
+    transform: scaleX(0.1);
+    opacity: 0.3;
+  }
+  40% {
+    transform: scaleX(1);
+    opacity: 1;
+  }
+  100% {
+    transform: scaleX(0.1);
+    opacity: 0.3;
+  }
+}
+
+.kamehameha {
+  position: absolute;
+  height: 40px;
+  background: linear-gradient(90deg, rgba(70, 130, 255, 0.8), rgba(120, 180, 255, 0.9), rgba(255, 255, 255, 1));
+  filter: blur(4px);
+  transform-origin: left;
+  animation: kamehameha 8s infinite;
+  z-index: -1;
+  border-radius: 20px;
+}
