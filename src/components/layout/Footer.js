@@ -10,6 +10,7 @@ export default function Footer() {
             rel="noopener noreferrer"
             className="hover:text-yellow-200 transition"
           >
+           <img width="24" height="24" src="https://img.icons8.com/plumpy/24/github.png" alt="github"/>
             GitHub
           </a>
           <a
