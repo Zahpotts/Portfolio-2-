@@ -10,10 +10,10 @@ export default function About() {
         <section className="mb-10">
           <h2 className="text-2xl font-bold text-blue-700 mb-2">Background</h2>
           <p className="text-lg text-gray-700">
-            Hi, I'm a passionate software engineer with a strong foundation in web development and a focus on creating user-friendly, impactful applications. My journey into tech began with a fascination for how things work, which led me to explore programming languages, frameworks, and problem-solving at a deeper level.
-I specialize in JavaScript, React, Node.js, and other modern web technologies. Whether I'm building something from scratch or collaborating with a team to bring an idea to life, I take pride in writing clean, maintainable code and always strive to learn and grow.
+            Hi, I am a passionate software engineer with a strong foundation in web development and a focus on creating user-friendly, impactful applications. My journey into tech began with a fascination for how things work, which led me to explore programming languages, frameworks, and problem-solving at a deeper level.
+I specialize in JavaScript, React, Node.js, and other modern web technologies. Whether I am building something from scratch or collaborating with a team to bring an idea to life, I take pride in writing clean, maintainable code and always strive to learn and grow.
 As a U.S. Air Force veteran, I bring a strong commitment to excellence, adaptability, and teamwork to every project. In my spare time, I enjoy contributing to open-source projects and staying current with the latest developments in tech.
-I'm always open to new challenges and opportunities to expand my skills — let's build something great together.
+I am always open to new challenges and opportunities to expand my skills — let&apos;s build something great together.
           </p>
         </section>
 
