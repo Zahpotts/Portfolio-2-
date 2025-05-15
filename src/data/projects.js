@@ -33,7 +33,7 @@ export const projects = [
         image: "",
         technologies: ["React", "Node.js", "Axios", "TailwindCSS", "Express.js", "OpenWeatherMap API"],
         githubUrl: "https://github.com/Zahpotts/Weather-App.git",
-        liveUrl: "https://weather-app-three-silk-20.vercel.app/",
+        liveUrl: "https://weather-app-frontend-dfjc.onrender.com/",
         slug: "weather-app",
         featured: true
     },
