@@ -37,6 +37,18 @@ export const projects = [
         slug: "weather-app",
         featured: true
     },
+    {
+        id:4,
+        title: "AI Learning App",
+        description: "An AI-powered learning application",
+        longDescription: "An AI-powered learning application that helps users learn new skills by providing personalized learning paths and resources.",
+        image: "",
+        technologies: ["React", "Node.js", "CORS", "TailwindCSS", "Express.js", "Google Gemini API"],
+        githubUrl: "https://github.com/Zahpotts/AI-Learning-App.git",
+        liveUrl: "https://flashcard-app-sandy-pi.vercel.app/",
+        slug: "ai-learning-app",
+        featured: true
+    },
     
 ];
 
